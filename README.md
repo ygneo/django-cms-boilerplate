@@ -14,8 +14,8 @@ Initial setup
 1. Edit settings.py
    1. Set the languages you want to have avaliable, and the default one:
 
-        LANGUAGES = [('es', 'en')]
-        DEFAULT_LANGUAGE = 0
+            LANGUAGES = [('es', 'en')]
+            DEFAULT_LANGUAGE = 0
 
    1. By default, sqlite3 db backend is used. You can change DATABASES setting to fit your needs.
 
