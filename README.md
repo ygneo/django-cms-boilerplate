@@ -1,7 +1,7 @@
 django-cms-boiler-plate
 =======================
 
-Yet another django boiler plate, specialized for django cms [1] projects.
+Yet another django boiler plate, specialized for django cms [l1] projects.
 
 Initial setup
 -------------
@@ -27,10 +27,12 @@ Initial setup
 Batteries included
 ------------------
 
- - Django CMS with default cms plugins and requirements (of
+ - Django CMS 2.4.1 and its default cms plugins and requirements.
+ - Python Image Library.
+ -
 
 Fabric taks
 -----------
 
 
-[1] https://www.django-cms.org/en/
+[l1] https://www.django-cms.org/en/
