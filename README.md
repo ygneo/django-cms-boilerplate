@@ -56,7 +56,7 @@ Batteries included
  - Python Image Library.
  - fabric, and some pre-defined fabric tasks.
  - django-extensions, https://github.com/django-extensions/django-extensions
- . South.
+ - South.
  - ipython
  - MYSql python binding.
 
