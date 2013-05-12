@@ -6,11 +6,9 @@ Yet another django boiler plate, specialized for django cms [1] projects.
 Initial setup
 -------------
 
-1. Clone this repository
+1. Download this repository as a zip file [2] and unzip it in your project's root directory, that should be empty to avoid problems.
 
-        git clone https://github.com/ygneo/django-cms-boilerplate.git <your-project-name>
-
-1. Install requirements
+1. Install required PyPI packages.
 
         pip install -r pip-requirements.txt
 
@@ -31,9 +29,18 @@ Initial setup
 
         cp local_settings.py.tpl local_settings.py
 
-1. Use fab
+1. Optionaly, you can create fab_settings.py from fab_settings.py.tpl if you want to use fabric tasks (see section below).
 
-1. Create yout configured database, and run manage commands to create tables and apply migrations
+        cp fab_settings.py.tpl fab_settings.py
+
+  - Configure your project so you can use the fabric tasks:
+    - PROJECT_NAME: Used to generate the path to your project and your virtualenv.
+    - PROJECT_HOST: Host machine serving the site.
+    - PROJECT_USER: Regular user with write permissions on the project directory.
+    - PROJECT_DB_NAME: Obvious one. :-)
+    - SUDOER_USER: User that has sudo running permissions for reloading supervisor and nginx.
+
+1. Create your configured database, and run manage commands to create tables and apply migrations
 
         ./manage.py syncdb
         ./manage.py migrate
@@ -64,3 +71,4 @@ Future work
 - Write a management command able to bootsrap the project (among others, edit settings file and generate a pip-requirements file - i.e. choosing which DB backend to use).
 
 [1] https://www.django-cms.org/en/
+[2] https://github.com/ygneo/django-cms-boilerplate/archive/master.zip
