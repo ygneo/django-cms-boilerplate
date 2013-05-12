@@ -6,3 +6,4 @@ local\_settings.py
 static/
 media/
 fab_settings.py
+.mysqldump
