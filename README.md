@@ -13,7 +13,7 @@ Initial setup
         pip install -r pip-requirements.txt
 
 1. Edit settings.py
-   - Set the languages you want to have avaliable, and the default one, in LANGUAGES and DEFAULT_LANUAGE settings.
+   - Set the languages you want to have avaliable, and the default one, in LANGUAGES and DEFAULT_LANGUAGE settings.
    - By default, sqlite3 db backend is used. You can change DATABASES setting to fit your needs.
    - Set your TIME_ZONE and your LANGUAGE_CODE.
    - If you're not going to use i18n and/or l10n, you can set USE_I8N and/ot USER_L10N to false.
