@@ -3,7 +3,7 @@ django-extensions
 django-debug-toolbar
 South
 MySQL-python
-ipython==0.10
+ipython
 fabric
 django-cms
 PIL

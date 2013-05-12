@@ -41,10 +41,20 @@ Batteries included
 
  - Django CMS 2.4.1 and its default cms plugins and requirements.
  - Python Image Library.
- -
+ - fabric.
+ - django-extensions, https://github.com/django-extensions/django-extensions
+ . South.
+ - ipython
+ - MYSQL python binding.
 
 Fabric taks
 -----------
 
+
+
+Future work
+-----------
+
+- Write a management command able to bootsrap the project (among others, edit settings file and generate a pip-requirements file - i.e. choosing which DB backend to use).
 
 [1] https://www.django-cms.org/en/
