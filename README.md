@@ -1,7 +1,7 @@
 django-cms-boiler-plate
 =======================
 
-Yet another django boiler plate, specialized for django cms [l1] projects.
+Yet another django boiler plate, specialized for django cms [1] projects.
 
 Initial setup
 -------------
@@ -35,4 +35,4 @@ Fabric taks
 -----------
 
 
-[l1] https://www.django-cms.org/en/
+[1] https://www.django-cms.org/en/
