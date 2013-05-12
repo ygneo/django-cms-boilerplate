@@ -58,7 +58,7 @@ Batteries included
  - django-extensions, https://github.com/django-extensions/django-extensions
  - South.
  - ipython
- - MYSql python binding.
+ - MySQL python binding.
 
 Fabric taks
 -----------
