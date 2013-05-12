@@ -33,12 +33,12 @@ Initial setup
 
         cp fab_settings.py.tpl fab_settings.py
 
-  - Configure your project so you can use the fabric tasks:
-    - PROJECT_NAME: Used to generate the path to your project and your virtualenv.
-    - PROJECT_HOST: Host machine serving the site.
-    - PROJECT_USER: Regular user with write permissions on the project directory.
-    - PROJECT_DB_NAME: Obvious one. :-)
-    - SUDOER_USER: User that has sudo running permissions for reloading supervisor and nginx.
+    - Configure your project so you can use the fabric tasks:
+      - PROJECT_NAME: Used to generate the path to your project and your virtualenv.
+      - PROJECT_HOST: Host machine serving the site.
+      - PROJECT_USER: Regular user with write permissions on the project directory.
+      - PROJECT_DB_NAME: Obvious one. :-)
+      - SUDOER_USER: User that has sudo running permissions for reloading supervisor and nginx.
 
 1. Create your configured database, and run manage commands to create tables and apply migrations
 
