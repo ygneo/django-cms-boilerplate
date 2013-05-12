@@ -27,6 +27,12 @@ Initial setup
    - Three sample django cms placeholders are configured. Feel free to change them.
    - A default configuration for logging is made and ready to be modified in LOGGING setting.
 
+1. Use local_settings.py.tpl as a template for your own local_settings.py file, which is git-ignored so you can have different settings per enviroment. It's recommended to configure the DATABASE connection in local_settings.py, since password won't be pushed to the repository. Start by copying the template:
+
+        cp local_settings.py.tpl local_settings.py
+
+1. Use fab
+
 1. Create yout configured database, and run manage commands to create tables and apply migrations
 
         ./manage.py syncdb
@@ -41,11 +47,11 @@ Batteries included
 
  - Django CMS 2.4.1 and its default cms plugins and requirements.
  - Python Image Library.
- - fabric.
+ - fabric, and some pre-defined fabric tasks.
  - django-extensions, https://github.com/django-extensions/django-extensions
  . South.
  - ipython
- - MYSQL python binding.
+ - MYSql python binding.
 
 Fabric taks
 -----------
