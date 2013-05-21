@@ -6,7 +6,7 @@ from fabric.contrib.project import rsync_project
 from fab_settings import PROJECT_NAME, PROJECT_HOST, PROJECT_USER, PROJECT_DB_NAME, SUDOER_USER
 
 
-env.project_name = '<project_name>'
+env.project_name = PROJECT_NAME
 env.roledefs = {
     PROJECT_USER: ['%s@%s' % (PROJECT_USER, PROJECT_HOST)],
     'sudoer': ['%s@%s' % (SUDOER_USER, PROJECT_HOST)]
