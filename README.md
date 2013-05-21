@@ -29,7 +29,7 @@ Initial setup
 
         cp local_settings.py.tpl local_settings.py
 
-1. Optionaly, you can create fab_settings.py from fab_settings.py.tpl if you want to use fabric tasks (see section below).
+1. Create fab_settings.py from fab_settings.py.tpl if you want to use fabric tasks (see section below).
 
         cp fab_settings.py.tpl fab_settings.py
 
@@ -62,7 +62,6 @@ Fabric taks
   - PROJECT_USER: Regular user with write permissions on the project directory.
   - PROJECT_DB_NAME: Obvious one. :-)
   - SUDOER_USER: User that has sudo running permissions for reloading supervisor and nginx.
-
 
 
 Future work
