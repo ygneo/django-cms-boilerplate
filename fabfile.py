@@ -8,7 +8,7 @@ from fab_settings import PROJECT_NAME, PROJECT_HOST, PROJECT_USER, PROJECT_DB_NA
 
 env.forward_agent = True
 env.project_name = PROJECT_NAME
-env.proyect_user = PROJECT_USER
+env.project_user = PROJECT_USER
 env.roledefs = {
     PROJECT_USER: ['%s@%s' % (PROJECT_USER, PROJECT_HOST)],
     'sudoer': ['%s@%s' % (SUDOER_USER, PROJECT_HOST)]
