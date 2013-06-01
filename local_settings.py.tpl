@@ -1,4 +1,5 @@
 # Django settings for jellyrisk project.
+import os
 
 DEBUG = True
 
