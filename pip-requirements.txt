@@ -6,4 +6,4 @@ MySQL-python
 ipython
 fabric
 django-cms
-PIL
+pillow
