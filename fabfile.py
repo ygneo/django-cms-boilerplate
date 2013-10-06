@@ -27,8 +27,7 @@ def git_status():
 
 
 @roles('%s' % PROJECT_USER)
-def pushpull():
-    local("git push origin master")
+def pull():
     with settings(user=PROJECT_USER):
         with cd(env['project_path']):
             run('git pull')
@@ -42,7 +41,7 @@ def reloadapp():
 
 @roles('%s' % PROJECT_USER)
 def release(run_migrate=True, static=True):
-    pushpull()
+    pull()
     run('%s install -r %spip-requirements.txt' %
         (env['pip_path'], env['project_path']))
     with cd(env['project_path']):
