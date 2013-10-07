@@ -19,6 +19,8 @@ DEBUG = True
 #     }
 # }
 
-# You can overrid default's static and media root
-# STATIC_ROOT = os.path.abspath(os.path.dirname(__file__))
-# MEDIA_ROOT = 'media/'
+
+STATIC_ROOT = ''
+STATICFILES_DIRS = (os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/'),)
+
+MEDIA_ROOT = 'media/'
