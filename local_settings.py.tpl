@@ -1,5 +1,4 @@
 # Django settings for jellyrisk project.
-import os
 
 DEBUG = True
 
@@ -19,8 +18,6 @@ DEBUG = True
 #     }
 # }
 
-
 STATIC_ROOT = ''
-STATICFILES_DIRS = (os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/'),)
 
 MEDIA_ROOT = 'media/'
