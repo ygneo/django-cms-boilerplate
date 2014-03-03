@@ -37,8 +37,6 @@ def _git_update(branch):
 @roles('sudoer')
 def reloadapp():
     sudo('supervisorctl restart %s' % env.project_name, shell=False)
-    sudo('service nginx reload', shell=False)
-
 
 @roles('%s' % PROJECT_USER)
 def release(run_migrate=True, static=True, branch='master'):
