@@ -48,6 +48,7 @@ def release(run_migrate=True, static=True, branch='master'):
     with cd(env['project_path']):
         if run_migrate:
             migrate()
+        _run_manage('compilemessages')
         if static:
             _run_manage('collectstatic --noinput')
     reloadapp()
