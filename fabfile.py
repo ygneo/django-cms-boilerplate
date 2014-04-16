@@ -20,6 +20,23 @@ env.pip_path = "/home/" + env.project_name + "/.virtualenvs/" + env.project_name
 env.project_media_dir = '/var/www/%s/media/' % env.project_name
 
 
+def _booleanize(value):
+    """Return value as a boolean."""
+
+    true_values = ("yes", "true", "1")
+    false_values = ("no", "false", "0")
+
+    if isinstance(value, bool):
+        return value
+
+    if value.lower() in true_values:
+        return True
+    elif value.lower() in false_values:
+        return False
+
+    raise TypeError("Cannot booleanize ambiguous value '%s'" % value)
+
+
 @roles('%s' % PROJECT_USER)
 def git_status():
     with cd(env['project_path']):
@@ -34,28 +51,30 @@ def _git_update(branch):
             run('git checkout %s' % branch)
             run('git reset --hard origin/%s' % branch)
 
+
 @roles('sudoer')
 def reloadapp():
     sudo('supervisorctl restart %s' % env.project_name, shell=False)
 
+
 @roles('%s' % PROJECT_USER)
 def release(run_migrate=True, static=True, branch='master'):
+    run_migrate = _booleanize(run_migrate)
+    static = _booleanize(static)
+
     _git_update(branch)
+
     run('%s install -r %spip-requirements.txt' %
         (env['pip_path'], env['project_path']))
+
     with cd(env['project_path']):
         if run_migrate:
-            migrate()
+            _run_manage('migrate')
         _run_manage('compilemessages')
         if static:
             _run_manage('collectstatic --noinput')
+
     reloadapp()
-
-
-@roles('%s' % PROJECT_USER)
-def migrate():
-    with cd(env['project_path']):
-        _run_manage('migrate')
 
 
 @roles('%s' % PROJECT_USER)
@@ -72,8 +91,10 @@ def pulldb():
 def _run_manage(command):
     run("%s ./manage.py %s" % (env['python_path'], command))
 
+
 def _dump_mysql_data(file_path):
     return 'mysqldump --defaults-file=".mysqldump_cnf" --single-transaction %s > %s' % (PROJECT_DB_NAME, file_path)
+
 
 @roles('%s' % PROJECT_USER)
 def syncmedia():
